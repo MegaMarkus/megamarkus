@@ -1,51 +1,58 @@
+<!-- Personal Page concept: Naz Hamid. http://thepersonalpage.me --> 
+<!-- Using the Ubuntu Font Family. License: http://font.ubuntu.com/ufl/ -->
+
 <!doctype html>
 <html>
 <head>
-<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic' rel='stylesheet' type='text/css'>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Markus Vincent Lehmann</title>
-        <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
-        <meta http-equiv="pragma" content="no-cache" />
-        <meta name="robots" content="all" />
-        <meta name="MSSmartTagsPreventParsing" content="true" />
-        <meta http-equiv="imagetoolbar" content="false" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->        
-        <style>
-                * { padding: 0; margin: 0; }
-                body { background-color: #333; }
-               h { color: #fff; font-family: 'Josefin Sans', sans-serif; font-weight: regular; font-size: 35px; line-height: 50px; margin-bottom: 21px; -webkit-font-smoothing: antialiased; }
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic' rel='stylesheet' type='text/css'>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Markus Vincent Lehmann</title>
+	<link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta name="robots" content="all" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->	
+	<style>
+		* { padding: 0; margin: 0; }
+		body {background-color: #2B2B2B; }
+		/* p { color: #fff; font-family: Helvetica; font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; } */
+		h { color: #fff; font-family: 'Josefin Sans', sans-serif; font-weight: regular; font-size: 35px; line-height: 50px; margin-bottom: 21px; -webkit-font-smoothing: antialiased; }
 		p { color: #fff; font-family: 'Josefin Sans', sans-serif; text-shadow: 15px 10px 12px #000000; font-weight: regular; font-size: 25px; line-height: 30px; margin-bottom: 21px; -webkit-font-smoothing: antialiased; }
-                a { color: #fff; font-weight: bold; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
+		a { color: #fff; font-weight: bold; text-decoration: none; /* border-bottom: 1px solid rgba(255,255,255,0.5); */ }
                 a:hover { color: #990000; border-bottom: 1px solid rgba(255,255,255,1); }
                 #monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
-                #about { width: 360px; padding: 0 0 0 150px; margin: 0px 50px 0 auto !important; }
+                #about { width: 30px; padding: 0 0 0 150px; margin: 0px 50px 0 auto !important; }
                 @media (max-width: 767px) {
                         #monogram { position: relative; width: auto; padding: 20px; margin: 0; }
                         #about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
                         background-image { opacity: 0.2; }
                 }
         </style>
-</head>        
-    
+</head>	
+
 <body>
-
-<div id="backstretch" style="left: 0px; top: 0px; position: fixed; overflow: hidden; z-index: -9999;">
-<img src="bg.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; z-index: -999999; width: 1409px; height: 1044px; left: 0px; top: -282.983203125px;">
-</div>
-
-<!-- swap out for a logo -->
-
-
-<!-- swap out for information about yourself -->
 <div id="about">
-        <h>Hey</h>
+<h>Hey</h>
 <p>I travel through Europe. Take part in my journey.</p>
 </div>
-
-
-
-</body>        
+<div id="backstretch" style="left: 0px; top: 0px; position: fixed; overflow: hidden; z-index: -999999; margin: 0px; padding: 0px; height: 1044px; width: 1409px;">
+<img src="bg.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; z-index: -999999; width: 1409px; height: 1044px; left: 0px; top: -282.983203125px;"></div>
+<!--include jquery & backstretch-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.backstretch.min.js"></script>
+<script type="text/javascript">
+$(function(){
+     $(window).resize(function(){
+         if($(this).width() >= 767){
+             $.backstretch("bg.jpg", {speed: 150});
+         }
+      })
+      .resize();//trigger resize on page load
+});
+</script>
+</body>	
 </html>
